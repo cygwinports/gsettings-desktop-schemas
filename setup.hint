@@ -1,0 +1,4 @@
+category: Gnome
+sdesc: "GNOME desktop GSettings schemas"
+ldesc: "gsettings-desktop-schemas contains a collection of GSettings 
+schemas for settings shared by various components of a desktop."
