@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gsettings-desktop-schemas"
-VERSION=3.14.1
+VERSION=3.14.2
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME desktop GSettings schemas"
