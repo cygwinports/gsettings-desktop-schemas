@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="gsettings-desktop-schemas"
-VERSION=3.22.0
+VERSION=3.24.1
 RELEASE=1
 CATEGORY="GNOME"
 SUMMARY="GNOME desktop GSettings schemas"
@@ -9,3 +9,18 @@ DESCRIPTION="gsettings-desktop-schemas contains a collection of GSettings
 schemas for settings shared by various components of a desktop."
 
 ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-devel girepository-GDesktopEnums3.0"
+gsettings_desktop_schemas_CONTENTS="
+	usr/share/doc/${NAME}
+	usr/share/GConf/gsettings/
+	usr/share/glib-2.0/schemas/
+	usr/share/locale/*/LC_MESSAGES/${NAME}.mo
+"
+gsettings_desktop_schemas_devel_REQUIRES=${NAME}
+gsettings_desktop_schemas_devel_CONTENTS="
+	usr/include/${NAME}/
+	usr/share/pkgconfig/${NAME}.pc
+"
+girepository_GDesktopEnums3_0_REQUIRES=${NAME}
+girepository_GDesktopEnums3_0_CONTENTS="usr/*/gir*-1.0/GDesktopEnums-3.0.*"
